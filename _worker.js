@@ -6,7 +6,7 @@ const app = express()
 const port = 9000
 
 app.use('/', createProxyMiddleware({
-  target: 'https://www.baidu.com',
+  target: 'https://api.openai.com',
   changeOrigin: true,
   onProxyReq: (proxyReq, req, res) => {
     // 移除 'x-forwarded-for' 和 'x-real-ip' 头，以确保不传递原始客户端 IP 地址等信息
