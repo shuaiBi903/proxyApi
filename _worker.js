@@ -1,7 +1,7 @@
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
-    url.host = "api.githubcopilot.com";
+    url.host = "ab.chatgpt.com";
     // openai is already set all CORS heasders 
     return fetch(url, {
       headers: request.headers,
